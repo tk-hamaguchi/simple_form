@@ -10,6 +10,7 @@ module SimpleForm
         end
 
         add_size!
+        placeholder if @builder.wrapper.components.include?(:placeholder)
         @builder.text_field(attribute_name, input_html_options)
       end
 
